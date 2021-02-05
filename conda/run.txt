@@ -1,0 +1,11 @@
+
+https://jcristharif.com/conda-docker-tips.html
+
+docker build -t thaiaddress:v1 .
+
+docker run -d --name thaiaddress-v1 -p 80:80 thaiaddress:v1
+
+docker run -t -i thaiaddress /bin/bash
+
+#run app 
+uvicorn app:app --reload
