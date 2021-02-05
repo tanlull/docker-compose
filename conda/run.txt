@@ -9,3 +9,6 @@ docker run -t -i thaiaddress /bin/bash
 
 #run app 
 uvicorn app:app --reload
+
+test : 
+127.0.0.1?addr=นายปรายุ้ด จันทร์กะเพรา 099-999-9999 25/25 ถ.พุทธมณฑล สาย 4 ต. ศาลายา อ.พุทธมณฑล จ.นครปฐม 73170
