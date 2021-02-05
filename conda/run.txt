@@ -1,14 +1,15 @@
+#Build image
+docker build -t thaiaddress:v1.0 .
 
-https://jcristharif.com/conda-docker-tips.html
+#Run
+docker run -d --name thaiaddress-v1 -p 8080:8080 thaiaddress:v1.0
 
-docker build -t thaiaddress:v1 .
+#test : 
+127.0.0.1:8080?addr=นายปรายุ้ด จันทร์กะเพรา 099-999-9999 25/25 ถ.พุทธมณฑล สาย 4 ต. ศาลายา อ.พุทธมณฑล จ.นครปฐม 73170
 
-docker run -d --name thaiaddress-v1 -p 80:80 thaiaddress:v1
-
+----
+#Shell 
 docker run -t -i thaiaddress /bin/bash
 
 #run app 
 uvicorn app:app --reload
-
-test : 
-127.0.0.1?addr=นายปรายุ้ด จันทร์กะเพรา 099-999-9999 25/25 ถ.พุทธมณฑล สาย 4 ต. ศาลายา อ.พุทธมณฑล จ.นครปฐม 73170
